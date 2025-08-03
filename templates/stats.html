@@ -1,0 +1,44 @@
+<!-- stats.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Stats</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🏆 2022 World Cup Team Stats</h1>
+        <button onclick="window.location.href='/'">⬅ Back to Home</button>
+        <button onclick="showStats()">Show Brazil's Stats</button>
+        <div id="stats" class="stats-box"></div>
+    </div>
+
+    <script>
+        function showStats() {
+            const stats = {
+                team: "Brazil",
+                matches_played: 5,
+                wins: 3,
+                losses: 2,
+                goals_scored: 8,
+                goals_conceded: 5,
+                top_scorer: "Richarlison"
+            };
+
+            document.getElementById("stats").innerHTML = `
+                <h2>${stats.team}</h2>
+                <ul>
+                    <li>Matches Played: ${stats.matches_played}</li>
+                    <li>Wins: ${stats.wins}</li>
+                    <li>Losses: ${stats.losses}</li>
+                    <li>Goals Scored: ${stats.goals_scored}</li>
+                    <li>Goals Conceded: ${stats.goals_conceded}</li>
+                    <li>Top Scorer: ${stats.top_scorer}</li>
+                </ul>
+            `;
+        }
+    </script>
+</body>
+</html>
